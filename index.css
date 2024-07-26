@@ -172,7 +172,7 @@ nav {
     bottom: 2rem;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 2rem;
+    font-size: 1.2rem;
     font-family: var(--header-font);
     color: white;
 }
@@ -186,7 +186,7 @@ nav {
 }
 
 .portfolio__card:nth-child(3)::after {
-    content: "Fashions";
+    content: "Pre-Weddings";
 }
 
 .portfolio__content {
@@ -249,7 +249,7 @@ nav {
 
 .service__card h4::after {
     position: absolute;
-    content: "~";
+    content: "";
     bottom: o;
     left: 50%;
     transform: translateX(-50%);
@@ -258,8 +258,9 @@ nav {
 }
 
 .service__card p {
-    color: var(--extra-light);
+    color: white;
     line-height: 1.75rem;
+    font-size: small;
 }
 
 .client__container {
@@ -354,6 +355,7 @@ nav {
 .blog__content p {
     margin-bottom: 2rem;
     line-height: 1.75rem;
+    color: white;
     columns: var(--extra-light);
 }
 
@@ -397,7 +399,7 @@ nav {
 }
 
 .footer__container img {
-    max-width: 170px;
+    max-width: 120px;
     margin-inline: auto;
     margin-bottom: 2rem;
 }
