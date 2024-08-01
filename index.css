@@ -74,11 +74,11 @@ body {
 
 .header {
     min-height: 600px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("IMG_9257.JPG");
+    background-image: url("IMG_9257.JPG");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    
 }
 
 nav {
@@ -89,15 +89,18 @@ nav {
     max-width: var(--max-width);
     margin: auto;
     z-index: 9;
+      
+    
 }
 
 .nav__header {
     padding: 1rem;
     display: flex;
+    max-width: 93%;
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
-    background-color: var(--text-dark);
+    background-color: white;
 }
 
 .nav__logo img {
@@ -106,7 +109,7 @@ nav {
 
 .nav__menu__btn {
     font-size: 1.5rem;
-    color: white;
+    color: rgb(0, 0, 0);
     cursor: pointer;
 }
 
@@ -119,7 +122,7 @@ nav {
     align-items: center;
     flex-direction: column;
     gap: 2rem;
-    background-color: var(--text-dark);
+    background-color:white;
     transform: translateY(-100%);
     transition: 0.5s;
     z-index: -1;
@@ -136,12 +139,12 @@ nav {
 .nav__links a {
     padding-bottom: 5px;
     font-weight: 500;
-    color: white;
+    color: rgb(0, 0, 0);
     border-bottom: 2px solid transparent;
 }
 
 .nav__links a:hover {
-    border-color: white;
+    border-color: rgb(0, 0, 0);
 }
 
 .about__container .section__description {
@@ -269,16 +272,52 @@ nav {
 
 .swiper {
     margin-top: 2rem;
-    padding-bottom: 3rem;
+    padding-bottom: 5rem;
     width: 100%;
 }
 
+.insta_swiper {
+    margin-top: 2rem;
+    padding-bottom: 5rem;
+    width: 100%;
+}
+
+.insta_swiper-slide{
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .swiper-slide img{
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.insta_swiper-slide img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-width: 135px;
+}
+
+
+.swiper-button-next,.swiper-rtl .swiper-button-prev {
+    right: var(--swiper-navigation-sides-offset,10px);
+    left: auto;
+    top: 120px !important;
+
+}
+
+.swiper-button-prev,.swiper-rtl .swiper-button-next {
+    left: var(--swiper-navigation-sides-offset,10px);
+    right: auto;
+    top: 120px !important;
 }
 
 .client__card {
@@ -377,6 +416,7 @@ nav {
     border: 1px solid white;
 }
 
+
 .instagram__container {
     overflow: hidden;
 }
@@ -387,13 +427,17 @@ nav {
     display: flex;
     align-items: center;
     gap: 1rem;
-    
     animation: scroll 45s linear infinite;
+    cursor: move;
+    cursor: grab;
 }
+
 
 .instagram__flex img {
     max-width: 135px;
 }
+
+
 
 @keyframes scroll {
     to{
@@ -508,12 +552,13 @@ nav {
     }
 
     nav {
-        padding: 2rem 1rem;
+        padding: 0.6rem 20%;
         position: static;
-        max-width: 900px;
+        max-width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        background-color: white;
     }
 
     .nav__header {

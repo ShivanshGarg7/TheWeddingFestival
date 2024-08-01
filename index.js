@@ -30,7 +30,7 @@ ScrollReveal().reveal(".about__container .section__description", {
 });
 ScrollReveal().reveal(".about__container img", {
     ...scrollRevealOption,
-    delay: 1500,
+    delay: 500,
 });
 
 ScrollReveal().reveal(".service__container .section__header", {
@@ -38,12 +38,12 @@ ScrollReveal().reveal(".service__container .section__header", {
 });
 ScrollReveal().reveal(".service__container .section__header", {
     ...scrollRevealOption,
-    delay: 500,
+    delay: 300,
 });
 ScrollReveal().reveal(".service__container .section__header", {
     ...scrollRevealOption,
-    delay: 1000,
-    duration: 1000,
+    delay: 500,
+    duration: 600,
     interval: 500,
 });
 const swiper = new Swiper(".swiper", {
@@ -58,15 +58,15 @@ ScrollReveal().reveal(".blog__content .section__header", {
 });
 ScrollReveal().reveal(".blog__content h4", {
     ...scrollRevealOption,
-    delay: 500,
+    delay: 400,
 })
 ScrollReveal().reveal(".blog__content p", {
     ...scrollRevealOption,
-    delay: 1000,
+    delay: 800,
 })
 ScrollReveal().reveal(".blog__content .blog__btn", {
     ...scrollRevealOption,
-    delay: 1500,
+    delay: 1200,
 })
 
 // ------------------------instagram-nodes---------------------------
@@ -77,3 +77,15 @@ Array.from(instagram.children).forEach((item) => {
     instagram.appendChild(duplicateNode);
 });
 // ------------------------instagram-nodes---------------------------
+
+
+var insta_swiper = new Swiper(".mySwiper", {
+  slidesPerView: 4,
+  centeredSlides: true,
+  spaceBetween: 30,
+  grabCursor: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
