@@ -1,6 +1,8 @@
 const menuBtn = document.getElementById("menu-btn");
 const navLinks = document.getElementById("nav-links");
 const menuBtnIcon = menuBtn.querySelector("i");
+const scrollWrapper = document.querySelector('.scroll-wrapper');
+const instagramFlex = document.querySelector('.instagram__flex');
 
 menuBtn.addEventListener("click", (e) => {
     navLinks.classList.toggle("open");
@@ -89,3 +91,74 @@ var insta_swiper = new Swiper(".mySwiper", {
     clickable: true,
   },
 });
+
+
+let isDown = false;
+let startX;
+let scrollLeft;
+let lastMoveX;
+let velocity = 0;
+let momentumID;
+
+// Start dragging
+scrollWrapper.addEventListener('mousedown', (e) => {
+    isDown = true;
+    instagramFlex.style.cursor = 'grabbing';
+    startX = e.pageX - scrollWrapper.offsetLeft;
+    scrollLeft = scrollWrapper.scrollLeft;
+    lastMoveX = startX;
+    velocity = 0; // Reset velocity on new drag
+    instagramFlex.style.animationPlayState = 'paused';
+    clearInterval(momentumID);
+});
+
+// Stop dragging
+scrollWrapper.addEventListener('mouseleave', () => {
+    if (isDown) {
+        applyMomentum();
+    }
+    isDown = false;
+    instagramFlex.style.cursor = 'grab';
+});
+
+scrollWrapper.addEventListener('mouseup', () => {
+    if (isDown) {
+        applyMomentum();
+    }
+    isDown = false;
+    instagramFlex.style.cursor = 'grab';
+});
+
+// Handle mouse movement during drag
+scrollWrapper.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - scrollWrapper.offsetLeft;
+    const walk = (x - startX) * 2; // Adjust the scroll speed if needed
+    scrollWrapper.scrollLeft = scrollLeft - walk;
+    velocity = (x - lastMoveX) * 2; // Calculate velocity
+    lastMoveX = x;
+});
+
+// Apply momentum after dragging
+function applyMomentum() {
+    clearInterval(momentumID); // Clear any previous momentum intervals
+    let lastScrollLeft = scrollWrapper.scrollLeft;
+    let lastTime = Date.now();
+
+    momentumID = setInterval(() => {
+        const now = Date.now();
+        const timeElapsed = now - lastTime;
+        lastTime = now;
+
+        // Apply friction to velocity
+        velocity *= 0.95;
+        if (Math.abs(velocity) < 0.1) {
+            clearInterval(momentumID);
+            instagramFlex.style.animationPlayState = 'running'; // Resume animation
+            return;
+        }
+
+        scrollWrapper.scrollLeft += velocity;
+    }, 16); // Approximately 60 FPS
+}
