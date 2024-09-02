@@ -223,6 +223,8 @@ nav {
     color: white;
 }
 
+
+
 .service__container .section__description {
     max-width: 600px;
     margin-inline: auto;
@@ -265,6 +267,68 @@ nav {
     line-height: 1.75rem;
     font-size: small;
 }
+
+
+.package {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("IMG_6870.JPG");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.package .btn{
+    color: rgb(255, 255, 255);
+    margin: 10px;
+}
+
+
+.package__container .section__header {
+    color: rgb(255, 255, 255);
+}
+
+
+.package__container .section__description {
+    max-width: 600px;
+    margin-inline: auto;
+    color: rgb(255, 255, 255);
+}
+
+
+.package__card {
+    text-align: justify;
+}
+
+
+
+.package__card h4 {
+    position: relative;
+    isolation: isolate;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1.75rem;
+    font-weight: 400;
+    font-family: var(--header-font);
+    color: rgb(255, 255, 255);
+}
+
+.package__card h4::after {
+    position: absolute;
+    content: "";
+    bottom: o;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    line-height: 0;
+}
+
+.package__card p {
+    color: rgb(255, 255, 255);
+    line-height: 1.75rem;
+    font-size: small;
+}
+
+
 
 .client__container {
     padding-bottom: 2rem;

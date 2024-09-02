@@ -14,38 +14,8 @@ navLinks.addEventListener("click", (e) => {
     navLinks.classList.remove("open");
     menuBtnIcon.setAttribute("class", "ri-menu-line");
 });
-const scrollRevealOption = {
-    distance: "50px",
-    origin: "buttom",
-    duration: 1000,
-};
 
-ScrollReveal().reveal(".about__container .section__header", {
-    ...scrollRevealOption,
-});
-ScrollReveal().reveal(".about__container .section__description", {
-    ...scrollRevealOption,
-    delay: 500,
-    intrval: 500,
-});
-ScrollReveal().reveal(".about__container img", {
-    ...scrollRevealOption,
-    delay: 500,
-});
 
-ScrollReveal().reveal(".service__container .section__header", {
-    ...scrollRevealOption,
-});
-ScrollReveal().reveal(".service__container .section__header", {
-    ...scrollRevealOption,
-    delay: 300,
-});
-ScrollReveal().reveal(".service__container .section__header", {
-    ...scrollRevealOption,
-    delay: 500,
-    duration: 600,
-    interval: 500,
-});
 const swiper = new Swiper(".swiper", {
     navigation: {
         nextEl: ".swiper-button-next",
@@ -53,21 +23,6 @@ const swiper = new Swiper(".swiper", {
     },
 });
 
-ScrollReveal().reveal(".blog__content .section__header", {
-    ...scrollRevealOption,
-});
-ScrollReveal().reveal(".blog__content h4", {
-    ...scrollRevealOption,
-    delay: 400,
-})
-ScrollReveal().reveal(".blog__content p", {
-    ...scrollRevealOption,
-    delay: 800,
-})
-ScrollReveal().reveal(".blog__content .blog__btn", {
-    ...scrollRevealOption,
-    delay: 1200,
-})
 
 // ------------------------instagram-nodes---------------------------
 const instagram = document.querySelector(".instagram__flex");
@@ -90,81 +45,6 @@ var insta_swiper = new Swiper(".mySwiper", {
   },
 });
 
-
-
-
-
-// const scrollWrapper = document.querySelector('.scroll-wrapper');
-// const instagramFlex = document.querySelector('.instagram__flex');
-// let isDown = false;
-// let startX;
-// let scrollLeft;
-// let lastMoveX;
-// let velocity = 0;
-// let momentumID;
-
-// // Start dragging
-// scrollWrapper.addEventListener('mousedown', (e) => {
-//     isDown = true;
-//     instagramFlex.style.cursor = 'grabbing';
-//     startX = e.pageX - scrollWrapper.offsetLeft;
-//     scrollLeft = scrollWrapper.scrollLeft;
-//     lastMoveX = startX;
-//     velocity = 0; // Reset velocity on new drag
-//     instagramFlex.style.animationPlayState = 'paused';
-//     clearInterval(momentumID);
-// });
-
-// // Stop dragging
-// scrollWrapper.addEventListener('mouseleave', () => {
-//     if (isDown) {
-//         applyMomentum();
-//     }
-//     isDown = false;
-//     instagramFlex.style.cursor = 'grab';
-// });
-
-// scrollWrapper.addEventListener('mouseup', () => {
-//     if (isDown) {
-//         applyMomentum();
-//     }
-//     isDown = false;
-//     instagramFlex.style.cursor = 'grab';
-// });
-
-// // Handle mouse movement during drag
-// scrollWrapper.addEventListener('mousemove', (e) => {
-//     if (!isDown) return;
-//     e.preventDefault();
-//     const x = e.pageX - scrollWrapper.offsetLeft;
-//     const walk = (x - startX) * 2; // Adjust the scroll speed if needed
-//     scrollWrapper.scrollLeft = scrollLeft - walk;
-//     velocity = (x - lastMoveX) * 2; // Calculate velocity
-//     lastMoveX = x;
-// });
-
-// // Apply momentum after dragging
-// function applyMomentum() {
-//     clearInterval(momentumID); // Clear any previous momentum intervals
-//     let lastScrollLeft = scrollWrapper.scrollLeft;
-//     let lastTime = Date.now();
-
-//     momentumID = setInterval(() => {
-//         const now = Date.now();
-//         const timeElapsed = now - lastTime;
-//         lastTime = now;
-
-//         // Apply friction to velocity
-//         velocity *= 0.95;
-//         if (Math.abs(velocity) < 0.1) {
-//             clearInterval(momentumID);
-//             instagramFlex.style.animationPlayState = 'running'; // Resume animation
-//             return;
-//         }
-
-//         scrollWrapper.scrollLeft += velocity;
-//     }, 16); // Approximately 60 FPS
-// }
 
 
 const scrollWrapper = document.querySelector('.scroll-wrapper');
@@ -233,3 +113,30 @@ function applyMomentum() {
         }
     }, 16); // Approximately 60 FPS
 }
+
+
+
+
+
+
+function WhatsAppChatstandard() {
+    var message = "Hello, I would like to know more about your Standard Package.";
+    var url = "https://api.whatsapp.com/send?phone=7607292269&text=" + encodeURIComponent(message);
+    window.open(url, '_blank');
+}
+
+
+function WhatsAppChatpremium() {
+    var message = "Hello, I would like to know more about your Premium Package.";
+    var url = "https://api.whatsapp.com/send?phone=7607292269&text=" + encodeURIComponent(message);
+    window.open(url, '_blank');
+}
+
+
+
+function WhatsAppChatplatinum() {
+    var message = "Hello, I would like to know more about your Platinum Package.";
+    var url = "https://api.whatsapp.com/send?phone=7607292269&text=" + encodeURIComponent(message);
+    window.open(url, '_blank');
+}
+
