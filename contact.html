@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vishal Photography</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="logo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script
+      src="https://kit.fontawesome.com/dbed6b6114.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="header" id="home">
+      <nav>
+          <div class="nav__header">
+              <div class="nav__logo">
+                  <a href="#"><img src="logo.jpg" alt="logo" width="60%"></a>
+              </div>
+              <div class="nav__menu__btn" id="menu-btn">
+                  <i class="ri-menu-line"></i>
+              </div>
+          </div>
+          <ul class="nav__links" id="nav-links">
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="gallery.html">GALLERY</a></li>
+              <li><a href="index.html#about">ABOUT US</a></li>
+              <li class="nav__logo">
+                  <a href="index.html">
+                      <img src="logo.jpg" alt="Logo" width="50%">
+                  </a>
+              </li>
+              <li><a href="service.html">SERVICES</a></li>
+              <li><a href="index.html#package">PACKAGES</a></li>
+              <li><a href="contact.html">CONTACT US</a></li>
+          </ul>
+      </nav>
+  </header>
+
+    <!-- ---------main--------- -->
+
+
+    <div class="contact_container">
+        <span class="big-circle"></span>
+        <img src="img/shape.png" class="square" alt="" />
+        <div class="form">
+          <div class="contact-info">
+            <h3 class="title">Let's get in touch</h3>
+            <p class="text">
+              To Explore Our Bestest Photography to collect your Precious Moments.
+            </p>
+  
+            <div class="info">
+              <div class="information">
+                <img src="img/location.png" class="icon" alt="" />
+                <p>Shop No 59, Sector-9 Jankipuram, Lucknow 226031 (Near Royal Motor's)</p>
+              </div>
+              <div class="information">
+                <img src="img/email.png" class="icon" alt="" />
+                <p>vishalphotography00@gmail.com</p>
+              </div>
+              <div class="information">
+                <img src="img/phone.png" class="icon" alt="" />
+                <p>8400636660</p>
+              </div>
+            </div>
+  
+            <div class="social-media">
+              <p>Connect with us :</p>
+              <div class="social-icons">
+                <a href="https://www.facebook.com/vishalsinghrathour7k?mibextid=LQQJ4d">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.youtube.com/@vishalphotography2656">
+                  <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://www.instagram.com/vishalphotograaphy?igsh=b3lraTg2MnBxMTR5">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://api.whatsapp.com/send/?phone=8400636660&text&type=phone_number&app_absent=0">
+                  <i class="fab fa-whatsapp"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+  
+          <div class="contact-form">
+            <span class="circle one"></span>
+            <span class="circle two"></span>
+          </div>
+        </div>
+      </div>
+
+</div>
+<div class="footer__bar">
+  <div class="footer__col">
+    <ul class="footer__links">
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="gallery.html">GALLERY</a></li>
+      <li><a href="index.html#about">ABOUT US</a></li>
+      <li><a href="index.html#services">SERVICES</a></li>
+      <li><a href="index.html#packages">PACKAGES</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+</div>
+<div class="footer__col">
+    <h4>CAPTURE YOUR MOMENTS</h4>
+    <p>Make your Precious Wedding Memorable With Us!</p>
+</div>
+    Copyright @ 2024 Vishal Photography. All rights reserved.
+</div>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="script.js"></script>
+<script>
+    
+const inputs = document.querySelectorAll(".input");
+function focusFunc() {
+  let parent = this.parentNode;
+  parent.classList.add("focus");
+}
+
+function blurFunc() {
+  let parent = this.parentNode;
+  if (this.value == "") {
+    parent.classList.remove("focus");
+  }
+}
+
+inputs.forEach((input) => {
+  input.addEventListener("focus", focusFunc);
+  input.addEventListener("blur", blurFunc);
+});
+
+
+</script>
+</body>
+
+</html>
