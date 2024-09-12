@@ -121,6 +121,8 @@ figcaption .title{
     font-size: 18px;
     line-height: 30px;
     text-transform: capitalize;
+    color: black !important;
+    font-weight: 500;
     top: 50%;
     margin-top: 30px;
     translate: translateX(80px) translateY(0) translateZ(0) rotate(0deg) scale(1);
@@ -153,7 +155,7 @@ figcaption .sub-title{
 
 figure:hover figcaption{
     color: white;
-    background: rgba(11, 206, 175, 0.9);
+    background: rgba(208, 208, 208, 0.9);
 }
 
 
