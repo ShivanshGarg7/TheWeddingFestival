@@ -121,14 +121,14 @@ function applyMomentum() {
 
 function WhatsAppChatstandard() {
     var message = "Hello, I would like to know more about your Standard Package.";
-    var url = "https://api.whatsapp.com/send?phone=7607292269&text=" + encodeURIComponent(message);
+    var url = "https://api.whatsapp.com/send?phone=+917607292269&text=" + encodeURIComponent(message);
     window.open(url, '_blank');
 }
 
 
 function WhatsAppChatpremium() {
     var message = "Hello, I would like to know more about your Premium Package.";
-    var url = "https://api.whatsapp.com/send?phone=7607292269&text=" + encodeURIComponent(message);
+    var url = "https://api.whatsapp.com/send?phone=+917607292269&text=" + encodeURIComponent(message);
     window.open(url, '_blank');
 }
 
@@ -136,7 +136,7 @@ function WhatsAppChatpremium() {
 
 function WhatsAppChatplatinum() {
     var message = "Hello, I would like to know more about your Platinum Package.";
-    var url = "https://api.whatsapp.com/send?phone=7607292269&text=" + encodeURIComponent(message);
+    var url = "https://api.whatsapp.com/send?phone=+917607292269&text=" + encodeURIComponent(message);
     window.open(url, '_blank');
 }
 

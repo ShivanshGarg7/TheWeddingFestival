@@ -146,6 +146,10 @@ nav {
     border-color: rgb(0, 0, 0);
 }
 
+
+ul li {
+  list-style: none;
+}
 .about__container .section__description {
     max-width: 900px;
     margin-inline: auto;
